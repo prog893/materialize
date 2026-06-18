@@ -31,7 +31,8 @@ materialize file1.txt file2.txt file3.txt
 ## Installation
 
 ```bash
-brew install prog893/tap/materialize
+brew tap prog893/tap
+brew install materialize
 ```
 
 ## Building from source
