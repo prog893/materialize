@@ -4,7 +4,11 @@ Force-download cloud-only files via NSFileCoordinator.
 
 ## Problem
 
-macOS cloud storage providers (Google Drive, Dropbox, OneDrive) sometimes show files as "available" but haven't actually downloaded them yet. Reading these files causes "Resource deadlock avoided" errors or returns stale/empty content.
+macOS cloud storage providers (Google Drive, Dropbox, OneDrive) use **NSFileCoordinator** (part of Apple's Cloud Storage Kit) to stream files on demand.
+
+Finder and most macOS apps handle this automatically — you can open a cloud-only file in TextEdit or VS Code without issues.
+
+But CLI tools (cat, grep, etc.) and AI agents using bash/exec tools to read files will error:
 
 ## Solution
 
