@@ -4,7 +4,7 @@ Force-download cloud-only files via NSFileCoordinator.
 
 ## Problem
 
-macOS Google Drive sometimes shows files as "available" but hasn't actually downloaded them yet. Reading these files causes "Resource deadlock avoided" errors or returns stale/empty content.
+macOS cloud storage providers (Google Drive, Dropbox, OneDrive) sometimes show files as "available" but haven't actually downloaded them yet. Reading these files causes "Resource deadlock avoided" errors or returns stale/empty content.
 
 ## Solution
 
@@ -21,7 +21,7 @@ Blocks until files are ready. Returns 0 on success, 1 on failure.
 ## Example
 
 ```bash
-# Read a Google Drive file that's cloud-only
+# Read a cloud-only file from Google Drive, Dropbox, or OneDrive
 materialize "$FILE" && cat "$FILE"
 
 # Process multiple files
@@ -31,7 +31,7 @@ materialize file1.txt file2.txt file3.txt
 ## Installation
 
 ```bash
-brew install torgayev/tap/materialize
+brew install prog893/tap/materialize
 ```
 
 ## Building from source
