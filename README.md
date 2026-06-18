@@ -44,7 +44,7 @@ cp .build/release/materialize /usr/local/bin/
 
 ## Author
 
-Tamirlan Torgayev (@torgayev)
+Tamirlan Torgayev ([@prog893](https://github.com/prog893))
 
 ## License
 
